@@ -1,0 +1,143 @@
+body {
+  background: radial-gradient(circle, #120016, #000);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.hidden { display: none; }
+
+#timer { font-size: 2rem; margin: 20px 0; }
+
+.hearts { margin-top: 30px; }
+
+.heart {
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 15px 20px;
+  background: transparent;
+  border: 2px solid #ff4d6d;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.heart:hover { background: #ff4d6d; }
+
+#game-board {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background: #222;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#birthday-button {
+  font-size: 1.5rem;
+  padding: 20px;
+  background: #ff4d6d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.icons button {
+  font-size: 1.3rem;
+  margin: 15px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Microphone Button with Photo Background */
+#voiceNoteButton {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #ff4d6d;
+  background: url('my\ image.jpeg') center/cover no-repeat;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.card.matched {
+  background: #ff4d6d;
+  color: white;
+}
+
+@keyframes merge {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.big-love-card {
+  width: 95vw;
+  max-width: 420px;
+  min-height: 200px;
+  background: #ff4d6d;
+  border-radius: 22px;
+  padding: 18px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.45;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  word-break: break-word;
+  animation: merge 0.8s ease-out, heartbeat 3.5s ease-in-out infinite;
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Roses & Petals */
+.rose { width: 80px; height: 80px; border-radius: 50%; margin: 20px auto; cursor: pointer; transition: transform 1s; }
+.rose.red { background: red; }
+.rose.pink { background: pink; }
+.rose.black { background: black; }
+.rose.opened { transform: scale(1.5); }
+
+.petals-container { display: flex; justify-content: center; gap: 5px; margin: 15px 0; }
+.petal { width: 40px; height: 40px; border-radius: 50%; transition: all 0.5s ease; }
+.petal.red { background: red; }
+.petal.pink { background: pink; }
+.petal.black { background: black; }
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.02); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+body.birthday {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  animation: bgPulse 6s ease-in-out infinite;
+}
+
+@keyframes bgPulse {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+  100% { filter: brightness(1); }
+}

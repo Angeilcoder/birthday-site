@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You Papi 🖤</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PRE-BIRTHDAY SECTION -->
+  <div id="countdown-section">
+    <h1>Something special is coming 🖤</h1>
+    <div id="timer">Loading...</div>
+
+    <div class="hearts">
+      <button class="heart" data-day="5">❤️ 5</button>
+      <button class="heart" data-day="4">❤️ 4</button>
+      <button class="heart" data-day="3">❤️ 3</button>
+      <button class="heart" data-day="2">❤️ 2</button>
+      <button class="heart" data-day="1">❤️ 1</button>
+    </div>
+  </div>
+
+  <!-- GAME SECTION -->
+  <div id="game-section" class="hidden">
+    <h2>Match the cards, my love 💕</h2>
+    <div id="game-board"></div>
+    <p id="game-message"></p>
+    <button onclick="closeGame()">Close</button>
+  </div>
+
+  <!-- MIDNIGHT SECTION -->
+  <div id="birthday-section" class="hidden">
+    <button id="birthday-button">
+      PRESS HERE FOR BIRTHDAY NONSENSE FROM YOUR WIFE 💖
+    </button>
+  </div>
+
+  <!-- BIRTHDAY CONTENT -->
+  <div id="content-section" class="hidden">
+    <div class="icons">
+      <button onclick="openLetter()">💌 Letter</button>
+      <button onclick="openRoses()">🌹 Roses</button>
+      <button onclick="openMusic()">🎧 Music</button>
+      <button id="voiceNoteButton" onclick="playVoice()"></button>
+      <audio id="voiceNote" src="my voice.mp4"></audio>
+    </div>
+
+    <div id="content-display"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <canvas id="confetti"></canvas>
+
+</body>
+</html>
